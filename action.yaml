@@ -1,0 +1,29 @@
+name: 'AI Code Reviewer'
+description: 'An action that uses OpenAI to review code changes in pull requests'
+author: 'AI Code Reviewer'
+
+inputs:
+  debug:
+    description: 'Enable debug mode'
+    required: false
+    default: 'false'
+  review_comment_lgtm:
+    description: 'Whether to comment LGTM when no issues found'
+    required: false
+    default: 'true'
+  openai_heavy_model:
+    description: 'OpenAI model to use for heavy analysis'
+    required: false
+    default: 'gpt-4'
+  path_filters:
+    description: 'Path filters to include/exclude files from review'
+    required: false
+    default: ''
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'eye'
+  color: 'blue'
