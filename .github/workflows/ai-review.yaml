@@ -37,3 +37,4 @@ jobs:
           path_filters: |
             !dist/**
             !**/*.lock
+          language: ja-JP
